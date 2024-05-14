@@ -1,0 +1,35 @@
+%%[
+SET @fname = [FirstName]
+SET @last =  [Last Name]
+SET @address =[Street Address]
+SET @postal =[Postalcode]
+SET @state = [State]
+SET @country =[Country]
+SET @email = [Email]
+SET @mobile = [Phonenumber]
+SET @DOB = [Date of Birth]
+SET @preference = [Preferences]
+SET @properFname = Propercase(@fname)
+SET @fulladdress = CONCAT(@address,", ", @state,", ", @postal, ", ", @country)
+SET @loweremail = lowercase(@email)
+]%%
+
+%%=v(@fulladdress)=%%
+
+Hi %%@properFname%%, 
+    
+    Thank you for registering with us!
+    
+    Here are the details we have on file for you:
+    
+    Name: %%@properFname%%
+    Preferences: %%@preference%%
+    Phone Number: %%@mobile%%
+    Address: %%@fulladdress%%
+    Email: %%@loweremail%%
+    Date of Birth: %%@DOB%%
+    
+    If any of these details are incorrect, please click here to update your information.
+    
+    Best regards
+    The Team
